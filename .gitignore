@@ -14,9 +14,3 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.zip
-*.zip
-*.zip
-.eslintrc.js
-.eslintignore
-.editorconfig
-.babelrc
