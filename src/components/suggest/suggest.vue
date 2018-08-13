@@ -9,7 +9,7 @@
           <p class="text" v-html="getDisplayName(item)"></p>
         </div>
       </li>
-      <div class="loading">
+      <div class="loadingWapper">
         <loading v-show="hasMore" text=""></loading>
       </div>
     </ul>
@@ -156,24 +156,20 @@ export default {
         display: flex
         align-items: center
         padding-bottom: 20px
-      .icon
-        flex: 0 0 30px
-        width: 30px
-        [class^="icon-"]
-          font-size: 14px
+        .icon
+          flex: 0 0 30px
+          width: 30px
+          [class^="icon-"]
+            font-size: 14px
+            color: $color-text-d
+        .name
+          flex: 1
+          font-size: $font-size-medium
           color: $color-text-d
-      .name
-        flex: 1
-        font-size: $font-size-medium
-        color: $color-text-d
-        overflow: hidden
-        .text
-          no-wrap()
-      .loading
+          overflow: hidden
+          .text
+            no-wrap()
+      .loadingWapper
+        height: 27px
         position: relative
-    .no-result-wrapper
-      position: absolute
-      width: 100%
-      top: 50%
-      transform: translateY(-50%)
 </style>

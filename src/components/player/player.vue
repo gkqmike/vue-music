@@ -202,6 +202,7 @@ export default {
     loop() {
       this.$refs.audio.currentTime = 0
       this.$refs.audio.play()
+      this.setPlayingState(true)
       if (this.currentLyric) {
         this.currentLyric.seek(0)
       }
@@ -390,10 +391,7 @@ export default {
     },
     _end() {
       if (this.mode === playMode.loop) {
-        this.$refs.audio.currentTime = 0
-        this.$refs.audio.play()
-        this.setPlayingState(true)
-        this.currentLyric.seek(0)
+        this.loop()
       } else {
         this.next()
       }
